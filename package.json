@@ -1,0 +1,51 @@
+{
+  "name": "make-package",
+  "version": "1.0.0",
+  "description": "生成package.json小工具",
+  "bin": {
+    "mpkg": "bin/mpkg.js"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "scripts": {
+    "prettier": "prettier --write src/*.ts .",
+    "babel": "babel src --out-dir lib --extensions .ts",
+    "watch": "babel src --out-dir lib --extensions .ts --watch",
+    "dev": "yarn watch",
+    "build": "yarn prettier && yarn babel",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yinjiazeng/make-package.git"
+  },
+  "keywords": [
+    "mpkg",
+    "make-pkg",
+    "make-package"
+  ],
+  "author": "Aniu <yinjiazeng@163.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yinjiazeng/make-package/issues"
+  },
+  "homepage": "https://github.com/yinjiazeng/make-package#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/node": "^13.7.7",
+    "babel-jest": "^25.1.0",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "commander": "^4.1.1",
+    "minimist": "^1.2.0"
+  }
+}

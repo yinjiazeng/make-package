@@ -1,0 +1,6 @@
+{
+  "target": "ESNext",
+  "module": "CommonJS",
+  "strict": true,
+  "allowSyntheticDefaultImports": true
+}
