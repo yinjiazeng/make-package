@@ -5,7 +5,7 @@ import { PKG } from '../utils/constant';
 import stringify from '../utils/stringify';
 import print from '../utils/print';
 
-module.exports = async (filePath: string, options: any) => {
+module.exports = (filePath: string, options: any) => {
   const pkg = path.join(filePath, PKG);
 
   try {

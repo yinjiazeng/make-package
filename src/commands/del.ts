@@ -6,7 +6,7 @@ import stringify from '../utils/stringify';
 import print from '../utils/print';
 import { del } from '../utils/package';
 
-module.exports = async (filePath: string, name: string, options: any) => {
+module.exports = (filePath: string, name: string, options: any) => {
   const pkg = path.join(filePath, PKG);
 
   try {

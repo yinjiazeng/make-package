@@ -6,7 +6,7 @@ import { PKG, TEMPLATE_PATH } from '../utils/constant';
 import stringify from '../utils/stringify';
 import print from '../utils/print';
 
-module.exports = async (filePath: string, name: string, options: any) => {
+module.exports = (filePath: string, name: string, options: any) => {
   const pkg = path.join(filePath, PKG);
   const tpkg = path.join(TEMPLATE_PATH, PKG);
   let tjson = {};
