@@ -1,6 +1,6 @@
 {
   "name": "make-package",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "生成package.json小工具",
   "bin": {
     "mpkg": "bin/mpkg.js"
@@ -15,7 +15,7 @@
     "babel": "babel src --out-dir lib --extensions .ts",
     "watch": "babel src --out-dir lib --extensions .ts --watch",
     "dev": "yarn watch",
-    "build": "yarn prettier && yarn babel",
+    "build": "yarn prettier && rimraf lib && yarn babel",
     "test": "jest"
   },
   "repository": {
@@ -43,6 +43,7 @@
     "babel-jest": "^25.1.0",
     "jest": "^25.1.0",
     "prettier": "^1.19.1",
+    "rimraf": "^3.0.2",
     "typescript": "^3.8.3"
   },
   "dependencies": {

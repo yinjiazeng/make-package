@@ -4,6 +4,8 @@ import { TEMPLATE_PATH, PKG } from '../utils/constant';
 import checkFileExist from '../utils/checkFileExist';
 import writeFile from '../utils/writeFile';
 import execCommand from '../utils/execCommand';
+import print from '../utils/print';
+import stringify from '../utils/stringify';
 
 module.exports = async (type?: string, ...args: any) => {
   const pkg = path.join(TEMPLATE_PATH, PKG);
@@ -15,12 +17,8 @@ module.exports = async (type?: string, ...args: any) => {
   }
 
   if (type === undefined) {
-    console.log();
-    console.log(require(pkg));
-    console.log();
-  } else if (type === 'set') {
-    execCommand('set', TEMPLATE_PATH, ...args);
-  } else if (type === 'del') {
-    execCommand('del', TEMPLATE_PATH, ...args);
+    print(stringify(require(pkg)), true);
+  } else if (['set', 'del', 'clear'].includes(type)) {
+    execCommand(type, TEMPLATE_PATH, ...args);
   }
 };;
