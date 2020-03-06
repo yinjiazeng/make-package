@@ -1,6 +1,6 @@
 {
   "name": "make-package",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "make-package 是可以生成和编辑 package.json 的命令行小工具，可以对其配置通用模板，后期你所创建的包都可以使用这个模板，避免了不必要的重复劳动。",
   "bin": {
     "mpkg": "bin/mpkg.js"
