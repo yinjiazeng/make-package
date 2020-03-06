@@ -1,19 +1,19 @@
 
 import * as path from 'path';
+import * as fs from 'fs';
 import { TEMPLATE_PATH, PKG } from '../utils/constant';
-import checkFileExist from '../utils/checkFileExist';
-import writeFile from '../utils/writeFile';
 import execCommand from '../utils/execCommand';
 import print from '../utils/print';
 import stringify from '../utils/stringify';
 
-module.exports = async (type?: string, ...args: any) => {
+module.exports = (type?: string, ...args: any) => {
   const pkg = path.join(TEMPLATE_PATH, PKG);
 
   try {
-    await checkFileExist(pkg);
+    fs.accessSync(pkg);
   } catch (e) {
-    await writeFile(pkg, '{}');
+    fs.mkdirSync(TEMPLATE_PATH);
+    fs.writeFileSync(pkg, '{}');
   }
 
   if (type === undefined) {
