@@ -20,11 +20,11 @@ module.exports = async (filePath: string, name: string, value: any, options: any
   let val = value;
 
   if (options.array) {
-    val = val.split(',');
+    val = val ? val.split(',') : [];
   } else if (options.boolean) {
-    if (val === "true") {
+    if (val === 'true') {
       val = true;
-    } else if (val === "false") {
+    } else if (val === 'false') {
       val = false;
     }
   } else if (options.number && !isNaN(val)) {

@@ -7,8 +7,7 @@
   },
   "files": [
     "bin",
-    "lib",
-    "pkg"
+    "lib"
   ],
   "scripts": {
     "prettier": "prettier --write src/*.ts .",
