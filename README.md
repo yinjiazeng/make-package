@@ -9,9 +9,9 @@ yarn global add make-package
 ## 使用
 配置默认值
 ```sh
-mpkg config set version 1.0.0
-mpkg config set author username@email.com
-mpkg config set license MIT
+mpkg temp set version 1.0.0
+mpkg temp set author username@email.com
+mpkg temp set license MIT
 ```
 
 初始化

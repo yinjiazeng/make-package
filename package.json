@@ -1,13 +1,14 @@
 {
   "name": "make-package",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "生成package.json小工具",
   "bin": {
     "mpkg": "bin/mpkg.js"
   },
   "files": [
     "bin",
-    "lib"
+    "lib",
+    "pkg"
   ],
   "scripts": {
     "prettier": "prettier --write src/*.ts .",
@@ -46,6 +47,6 @@
   },
   "dependencies": {
     "commander": "^4.1.1",
-    "minimist": "^1.2.0"
+    "lodash.merge": "^4.6.2"
   }
 }
