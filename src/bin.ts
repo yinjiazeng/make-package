@@ -9,6 +9,9 @@ program.version(pkg.version, '-v, --version', '当前版本');
 program
   .command('temp [type] [name] [value]')
   .description('设置模板')
+  .option('-a, --array', 'value是数组，以英文","分隔')
+  .option('-b, --boolean', 'value是布尔值')
+  .option('-n, --number', 'value是数字')
   .action((...args) => {
     execCommand('temp', ...args);
   });
