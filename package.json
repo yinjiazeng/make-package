@@ -15,7 +15,8 @@
     "watch": "babel src --out-dir lib --extensions .ts --watch",
     "dev": "yarn watch",
     "build": "yarn prettier && rimraf lib && yarn babel",
-    "test": "jest"
+    "test": "jest",
+    "dts": "tsc"
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,7 @@
     "@babel/node": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
     "@babel/preset-typescript": "^7.8.3",
+    "@types/lodash.merge": "^4.6.6",
     "@types/node": "^13.7.7",
     "babel-jest": "^25.1.0",
     "jest": "^25.1.0",

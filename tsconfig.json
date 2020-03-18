@@ -1,6 +1,13 @@
 {
-  "target": "ESNext",
-  "module": "CommonJS",
-  "strict": true,
-  "allowSyntheticDefaultImports": true
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "CommonJS",
+    "strict": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "rootDir": "src",
+    "outDir": "lib"
+  }
 }
